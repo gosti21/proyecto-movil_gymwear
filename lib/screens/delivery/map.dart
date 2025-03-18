@@ -45,7 +45,7 @@ class _MapScreenState extends State<MapScreen> {
       appBar: AppBar(title: Text("Orden #26")),
       body: Column(
         children: [
-          // Mapa en la parte superior
+          
           Expanded(
             flex: 3,
             child: widget.lat == null || widget.lng == null
@@ -71,7 +71,6 @@ class _MapScreenState extends State<MapScreen> {
                   ),
           ),
 
-          // Contenedor inferior con botones y datos
           Expanded(
             flex: 2,
             child: Container(
@@ -123,7 +122,7 @@ class _MapScreenState extends State<MapScreen> {
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.green),
                         onPressed: () {
-                          // Acción cuando se presiona "Pedido Entregado"
+                          
                         },
                         child: Text("PEDIDO ENTREGADO"),
                       ),
@@ -131,7 +130,7 @@ class _MapScreenState extends State<MapScreen> {
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.red),
                         onPressed: () {
-                          // Acción cuando se presiona "Reportar Incidente"
+                          
                         },
                         child: Text("REPORTAR INCIDENTE"),
                       ),

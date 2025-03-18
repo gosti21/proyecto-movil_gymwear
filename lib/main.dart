@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: RolesScreen(), // Mostrar la pantalla de roles al iniciar
+      home: RolesScreen(),
     );
   }
 }

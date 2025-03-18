@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'map.dart'; // Importa la pantalla del mapa
+import 'map.dart'; 
 
 class DetailsScreen extends StatelessWidget {
   final Map<String, dynamic> encargo;
@@ -30,7 +30,7 @@ class DetailsScreen extends StatelessWidget {
                     Row(
                       children: [
                         Icon(
-                          Icons.local_shipping, // Icono de caja de envío
+                          Icons.local_shipping, 
                           size: 50,
                           color: Colors.blueGrey,
                         ),
@@ -46,6 +46,8 @@ class DetailsScreen extends StatelessWidget {
                         ),
                       ],
                     ),
+
+                    //cambiar iconos con flutter_svg luego//
                     Divider(),
                     Text("📌 Cliente: ${encargo['cliente']}",
                         style: TextStyle(fontSize: 16)),
@@ -64,14 +66,13 @@ class DetailsScreen extends StatelessWidget {
                 minimumSize: Size(double.infinity, 50),
               ),
               onPressed: () {
-                // Navegar a la pantalla de mapa con dirección, latitud y longitud
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => MapScreen(
                       direccion: encargo['direccion'],
-                      lat: encargo['latitud'] ?? 0.0, // Usa 0.0 si es null
-                      lng: encargo['longitud'] ?? 0.0, // Usa 0.0 si es null
+                      lat: encargo['latitud'] ?? 0.0, 
+                      lng: encargo['longitud'] ?? 0.0,
                     ),
                   ),
                 );

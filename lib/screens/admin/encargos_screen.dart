@@ -26,7 +26,7 @@ class _EncargosScreenState extends State<EncargosScreen> {
           content: SingleChildScrollView(
             child: Column(
               mainAxisSize:
-                  MainAxisSize.min, // Evita que ocupe toda la pantalla
+                  MainAxisSize.min, 
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text("Agregar Encargo",

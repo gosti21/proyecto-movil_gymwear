@@ -29,7 +29,6 @@ class EnCaminoScreen extends StatelessWidget {
         subtitle: Text("Cliente: ${encargo['cliente']}\nDirección: ${encargo['direccion']}"),
         trailing: ElevatedButton(
           onPressed: () {
-            // Navegar a details_screen.dart y enviar los datos del encargo
             Navigator.push(
               context,
               MaterialPageRoute(

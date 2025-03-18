@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'despacho_screen.dart';
 import 'en_camino_screen.dart';
 import 'entregado_screen.dart';
-import 'package:gymmovil/screens/roles_screen.dart'; // Importa RolesScreen
+import 'package:gymmovil/screens/roles_screen.dart'; 
 
 class DeliveryScreen extends StatefulWidget {
   @override
@@ -25,10 +25,9 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
   List<Map<String, dynamic>> enCamino = [];
   List<Map<String, dynamic>> entregados = [];
 
-  // Función para cambiar el estado de un encargo
   void actualizarEstado(Map<String, dynamic> encargo, String nuevoEstado) {
     setState(() {
-      // Remover de la lista actual
+
       if (encargo['estado'] == "Despachado") {
         despachados.remove(encargo);
         encargo['estado'] = nuevoEstado;
@@ -49,13 +48,13 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
         appBar: AppBar(
           title: Text("Delivery"),
           leading: IconButton(
-            icon: Icon(Icons.arrow_back), // Botón de regreso
+            icon: Icon(Icons.arrow_back), 
             onPressed: () {
               Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => RolesScreen()),
                 (Route<dynamic> route) =>
-                    false, // Elimina todas las pantallas previas
+                    false, 
               );
             },
           ),

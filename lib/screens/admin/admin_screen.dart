@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gymmovil/screens/admin/encargos_screen.dart';
 import 'package:gymmovil/screens/admin/entrega_screen.dart';
 import 'package:gymmovil/screens/admin/reporte_screen.dart';
-import 'package:gymmovil/screens/roles_screen.dart'; // Importa la pantalla de roles
+import 'package:gymmovil/screens/roles_screen.dart'; 
+
 
 class AdminScreen extends StatefulWidget {
   @override
@@ -30,12 +31,12 @@ class _AdminScreenState extends State<AdminScreen> with SingleTickerProviderStat
       appBar: AppBar(
         title: Text("Gestión de Admin"),
         leading: IconButton(
-          icon: Icon(Icons.arrow_back), // Botón de regreso
+          icon: Icon(Icons.arrow_back), 
           onPressed: () {
             Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(builder: (context) => RolesScreen()), 
-              (Route<dynamic> route) => false, // Elimina todas las pantallas previas
+              (Route<dynamic> route) => false, 
             );
           },
         ),

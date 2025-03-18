@@ -8,11 +8,11 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100], // Fondo claro como en la imagen
+      backgroundColor: Colors.grey[100], 
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Barra superior con botón de regreso
+          
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
             color: Colors.blue,
@@ -34,11 +34,11 @@ class DetailsScreen extends StatelessWidget {
           ),
           const SizedBox(height: 20),
 
-          // Tarjeta con detalles del pedido
+          //
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Card(
-              color: Colors.grey[50], // Color más claro para el Card
+              color: Colors.grey[50], 
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
                 side: const BorderSide(color: Colors.grey, width: 0.8),
@@ -49,7 +49,7 @@ class DetailsScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Primera fila con ícono y título del pedido
+                    // 
                     Row(
                       children: [
                         const Icon(Icons.local_shipping,
@@ -96,7 +96,7 @@ class DetailsScreen extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: ElevatedButton(
               onPressed: () {
-                // Acción al presionar
+    
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.green,
@@ -115,8 +115,6 @@ class DetailsScreen extends StatelessWidget {
       ),
     );
   }
-
-  // 🔹 Widget auxiliar para mostrar un detalle con icono
   Widget _detalleItem(IconData icon, String titulo, String valor) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4),
