@@ -27,6 +27,9 @@ environment:
 # dependencies can be manually updated by changing the version numbers below to
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
+
+  
+
 dependencies:
   flutter:
     sdk: flutter
@@ -36,6 +39,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   google_maps_flutter: ^2.10.1
   url_launcher: ^6.3.1
+  firebase_core: ^2.32.0
+  cloud_firestore: ^4.17.5
+
 
 dev_dependencies:
   flutter_test:

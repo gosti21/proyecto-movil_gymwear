@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "839288325613",
+    "project_id": "gymmovil-ce1e1",
+    "storage_bucket": "gymmovil-ce1e1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839288325613:android:9cdccfde38c648b53413e4",
+        "android_client_info": {
+          "package_name": "com.example.gymmovil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjXVNR1i_CAqmOstYyyaCPyjC8d-c-S0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

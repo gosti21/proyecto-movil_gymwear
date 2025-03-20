@@ -70,8 +70,7 @@ class _DeliveryScreenState extends State<DeliveryScreen> {
         ),
         body: TabBarView(
           children: [
-            DespachoScreen(
-                encargos: despachados, actualizarEstado: actualizarEstado),
+            DespachoScreen(),
             EnCaminoScreen(
                 encargos: enCamino, actualizarEstado: actualizarEstado),
             EntregadoScreen(encargos: entregados),
