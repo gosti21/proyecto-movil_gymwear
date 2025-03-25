@@ -48,15 +48,26 @@ class _EncargosScreenState extends State<EncargosScreen> {
                             cantidadController.text.isNotEmpty &&
                             direccionController.text.isNotEmpty &&
                             fechaController.text.isNotEmpty) {
-                          _firestore.collection('encargos').add({
-                            "cliente": clienteController.text,
-                            "pedido": pedidoController.text,
-                            "cantidad": int.parse(cantidadController.text),
-                            "direccion": direccionController.text,
-                            "fecha": fechaController.text,
-                            "estado": "Pendiente"
-                          });
-                          Navigator.pop(context);
+                          try {
+                            int cantidad = int.parse(cantidadController.text);
+                            _firestore.collection('encargos').add({
+                              "cliente": clienteController.text,
+                              "pedido": pedidoController.text,
+                              "cantidad": cantidad,
+                              "direccion": direccionController.text,
+                              "fecha": fechaController.text,
+                              "estado": "Pendiente"
+                            });
+                            Navigator.pop(context);
+                          } catch (e) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text("Cantidad debe ser un número válido")),
+                            );
+                          }
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(content: Text("Todos los campos son obligatorios")),
+                          );
                         }
                       },
                       child: Text("Agregar"),
@@ -99,7 +110,10 @@ class _EncargosScreenState extends State<EncargosScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => DetailsScreen(encargo: encargo.data() as Map<String, dynamic>),
+                        builder: (context) => DetailsScreen(
+                          idEncargo: encargo.id,
+                          encargo: encargo.data() as Map<String, dynamic>,
+                        ),
                       ),
                     );
                   },
