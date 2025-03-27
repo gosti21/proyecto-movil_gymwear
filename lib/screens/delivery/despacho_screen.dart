@@ -46,9 +46,10 @@ class DespachoScreen extends StatelessWidget {
                   subtitle: Text(
                       "Cliente: ${encargo['cliente']}\nFecha: ${encargo['fecha']}"),
                   trailing: ElevatedButton(
-                    onPressed: () {
-                      _firestore.collection('encargos').doc(encargo.id).update({
-                        'estado': 'En Camino', // 🔹 Cambia estado a "En Camino"
+                    onPressed: () async {
+                      // 🔹 Cambiar el estado en Firestore
+                      await _firestore.collection('encargos').doc(encargo.id).update({
+                        'estado': 'En Camino',
                       });
                     },
                     style: ElevatedButton.styleFrom(
